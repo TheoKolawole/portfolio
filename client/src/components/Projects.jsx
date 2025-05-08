@@ -29,16 +29,16 @@ const Projects = () => {
       ]
     },
     {
-      title: "Fintech Dashboard",
-      description: "A comprehensive financial analytics dashboard for tracking investments and expenses.",
-      tags: ["React", "Chart.js", "Tailwind CSS", "Firebase"],
-      image: "fintech",
+      title: "Herald Web",
+      description: "A platform that allows schools in Nigeria generate a fully functional, customizable and modern website for their schools.",
+      tags: ["PHP", "MySQL", "JavaScript"],
+      image: "herald",
       link: "#",
       features: [
-        "Real-time data visualization",
-        "Expense categorization with AI",
-        "Portfolio performance tracking",
-        "Budget planning tools"
+        "School management operations",
+        "Result generation system",
+        "Attendance tracking",
+        "Student performance analytics"
       ]
     }
   ];

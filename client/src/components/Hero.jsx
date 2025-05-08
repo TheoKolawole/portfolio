@@ -8,6 +8,27 @@ export default function Hero() {
     setIsVisible(true);
   }, []);
 
+  // Handle resume download
+  const handleDownloadResume = () => {
+    // Create an anchor element
+    const link = document.createElement('a');
+    
+    // Set the href to the resume PDF path in the public folder
+    link.href = '/Theophilus_Kolawole_Resume.pdf';
+    
+    // Set download attribute with filename
+    link.download = 'Theophilus_Kolawole_Resume.pdf';
+    
+    // Append to the document
+    document.body.appendChild(link);
+    
+    // Trigger the click event
+    link.click();
+    
+    // Clean up
+    document.body.removeChild(link);
+  };
+
   return (
     <header id="home" className="relative bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 dark:from-blue-800 dark:via-blue-900 dark:to-indigo-900 text-white py-32 overflow-hidden">
       {/* Enhanced background with more dynamic elements */}
@@ -67,7 +88,10 @@ export default function Hero() {
             </p>
             
             <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4">
-              <button className="group bg-white text-blue-700 px-6 py-3 rounded-xl font-medium flex items-center justify-center hover:bg-blue-50 transition-all duration-300 shadow-lg shadow-blue-900/20 hover:shadow-xl hover:shadow-blue-900/30 hover:scale-105">
+              <button 
+                onClick={handleDownloadResume}
+                className="group bg-white text-blue-700 px-6 py-3 rounded-xl font-medium flex items-center justify-center hover:bg-blue-50 transition-all duration-300 shadow-lg shadow-blue-900/20 hover:shadow-xl hover:shadow-blue-900/30 hover:scale-105"
+              >
                 <Download size={18} className="mr-2" />
                 Download Résumé
                 <span className="ml-2 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
