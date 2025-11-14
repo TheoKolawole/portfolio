@@ -6,7 +6,7 @@ const Projects = () => {
 			title: 'Teyweb Stores',
 			description: 'A hosted e-commerce platform for building and managing online stores.',
 			tags: ['React', 'Node.js', 'Next.js', 'Express.js', 'MySQL', 'Tailwind CSS'],
-			image: 'teyweb',
+			image: 'teyweb.png',
 			link: 'https://demo.preview.teyweb.com',
 			features: ['Custom storefronts', 'Multi-store support', 'Payment gateway integrations'],
 		},
@@ -14,7 +14,7 @@ const Projects = () => {
 			title: 'Herald Web',
 			description: 'Website platform for schools and institutions with content and admin tools.',
 			tags: ['PHP', 'MySQL', 'JavaScript', 'HTML', 'CSS', 'Bootstrap'],
-			image: 'herald',
+			image: 'hweb.png',
 			link: 'https://hweb.com.ng',
 			features: ['CMS-driven pages', 'Result generation system', 'Attendance tracking'],
 		},
@@ -22,7 +22,7 @@ const Projects = () => {
 			title: 'Brandware Digital Marketing',
 			description: 'A digital marketing agency site showcasing services and case studies.',
 			tags: ['React', 'Next.js', 'Marketing'],
-			image: 'brandware',
+			image: 'brandware-services.png',
 			link: 'https://www.brandware.com.ng',
 			features: ['Campaign case studies', 'Service listings', 'Contact and lead capture'],
 		},
@@ -30,7 +30,7 @@ const Projects = () => {
 			title: 'Issach Health Foundation',
 			description: 'Non-profit foundation focused on health outreach and programs.',
 			tags: ['Next.js', 'Tailwind CSS', 'Healthcare', 'Non-profit'],
-			image: 'issach',
+			image: 'issach-health-foundation.png',
 			link: 'https://issachhealthfoundation.com',
 			features: ['Program listings', 'Volunteer sign-ups', 'Donation integrations'],
 		},
@@ -38,7 +38,7 @@ const Projects = () => {
 			title: 'Opeyemi Okeowo & Co.',
 			description: 'Professional services firm showcasing practice areas and contact information.',
 			tags: ['Next.js', 'Tailwind CSS'],
-			image: 'opeyemi',
+			image: 'opeyemi-okeowo.png',
 			link: 'https://opeyemiokeowo.com.ng',
 			features: ['Service descriptions', 'Attorney profiles', 'Contact and consultations'],
 		},
@@ -56,8 +56,13 @@ const Projects = () => {
 				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 					{projects.map((project, idx) => (
 						<div key={idx} className="bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-lg border border-slate-100 dark:border-slate-700 hover:shadow-xl transition group">
-							<div className="h-48 bg-gradient-to-r from-blue-600 to-indigo-600 relative overflow-hidden">
-								<div className="absolute inset-0 flex items-center justify-center text-white text-4xl font-bold">{project.title.charAt(0)}</div>
+							<div className="h-48 relative overflow-hidden bg-slate-100 dark:bg-slate-700">
+								{/* Render image from public/projects if provided, otherwise fall back to gradient initial */}
+								{project.image ? (
+									<img src={`/projects/${project.image}`} alt={project.title} className="absolute inset-0 w-full h-full object-cover" />
+								) : (
+									<div className="absolute inset-0 flex items-center justify-center text-white text-4xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600">{project.title.charAt(0)}</div>
+								)}
 								<div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end">
 									<div className="p-4 w-full">
 										<div className="flex flex-wrap gap-2">
