@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 14, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/kolaw/Documents/Projects/portfolio/src/app/page.jsx"],"sourcesContent":["import Portfolio from '../src/views/Portfolio';\r\n\r\nexport default function Page() {\r\n\treturn <Portfolio />;\r\n}\r\n"],"names":[],"mappings":";;;;;;;;;;;;AAEe,SAAS;IACvB,qBAAO,8OAAC;;;;;AACT"}}]
+}
