@@ -7,7 +7,7 @@ const Projects = () => {
 			description: 'A hosted e-commerce platform for building and managing online stores.',
 			tags: ['React', 'Node.js', 'Next.js', 'Express.js', 'MySQL', 'Tailwind CSS'],
 			image: 'teyweb.png',
-			link: 'https://demo.preview.teyweb.com',
+			link: 'https://teyweb.com',
 			features: ['Custom storefronts', 'Multi-store support', 'Payment gateway integrations'],
 		},
 		{
@@ -93,7 +93,7 @@ const Projects = () => {
 										))}
 									</ul>
 								</div>
-								<a href={project.link} className="group inline-flex items-center text-sm font-medium text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300">
+								<a href={project.link} target="_blank" rel="noopener noreferrer" className="group inline-flex items-center text-sm font-medium text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300">
 									View Project
 									<ArrowRight size={16} className="ml-1 transform transition-transform group-hover:translate-x-1" />
 								</a>
