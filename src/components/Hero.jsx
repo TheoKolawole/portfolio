@@ -17,11 +17,11 @@ export default function Hero() {
 				<div className="absolute left-1/2 top-1/3 w-48 h-48 rounded-full bg-purple-500/20 blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
 			</div>
 
-			<div className="max-w-6xl mx-auto px-4 relative z-10">
+			<div className="max-w-6xl mx-auto px-4 relative z-10 flex flex-col lg:flex-row items-center justify-between gap-12">
 				{/* Main text content (server-rendered) */}
-				<div id="hero-content" className="">
+				<div id="hero-content" className="lg:w-7/12 text-center lg:text-left">
 					<div className="inline-block px-4 py-1.5 bg-blue-800/40 dark:bg-blue-950/60 backdrop-blur-lg rounded-full mb-4 border border-blue-400/20 shadow-lg shadow-blue-900/10">
-						<span className="text-blue-200 flex items-center">
+						<span className="text-blue-200 flex items-center justify-center lg:justify-start">
 							<span className="inline-block w-2 h-2 bg-blue-400 rounded-full mr-2 animate-pulse" />
 							Developer &amp; Designer
 						</span>
@@ -36,7 +36,7 @@ export default function Hero() {
 						I build scalable web and mobile applications with modern tools, clean code, and a strong user-centered mindset.
 					</p>
 
-					<div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4">
+					<div className="flex flex-col sm:flex-row justify-center lg:justify-start space-y-3 sm:space-y-0 sm:space-x-4">
 						{/* Anchor fallback is server-rendered so download works without JS */}
 						<a
 							id="resume-btn"
@@ -56,9 +56,9 @@ export default function Hero() {
 				</div>
 
 				{/* Avatar (server-rendered) */}
-				<div id="hero-avatar" className="mt-8 lg:mt-0 flex justify-center">
+				<div id="hero-avatar" className="lg:w-5/12 flex justify-center lg:justify-end">
 					<div className="relative">
-						<div className="w-56 h-56 md:w-64 md:h-64 rounded-full bg-gradient-to-br from-blue-400 to-indigo-500 p-1 shadow-2xl shadow-blue-900/30">
+						<div className="w-56 h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 rounded-full bg-gradient-to-br from-blue-400 to-indigo-500 p-1 shadow-2xl shadow-blue-900/30">
 							<div className="w-full h-full rounded-full bg-blue-800 flex items-center justify-center overflow-hidden border-4 border-white/10">
 								<img src="/theophilus.jpg" alt="Profile" className="w-full h-full object-cover rounded-full" />
 							</div>
