@@ -6,9 +6,9 @@ export default function Hero() {
 	// be attached by `Hero.client.jsx` which runs in the browser.
 
 	return (
-		<header id="home" className="relative bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 dark:from-blue-800 dark:via-blue-900 dark:to-indigo-900 text-white py-32 overflow-hidden">
+		<header id="home" className="relative bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 dark:from-blue-800 dark:via-blue-900 dark:to-indigo-900 text-white pt-28 pb-36 md:pt-32 md:pb-40 overflow-hidden">
 			{/* Enhanced background with more dynamic elements */}
-			<div className="absolute inset-0 z-0">
+			<div className="absolute inset-0 z-0 pointer-events-none">
 				<div className="absolute inset-0 bg-[url('data:image/svg+xml;charset=utf-8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22 width=%2232%22 height=%2232%22 fill=%22none%22 stroke=%22rgba(255,255,255,0.05)%22><path d=%22M0 .5H31.5V32%22/></svg>')] opacity-30"></div>
 
 				{/* Enhanced glow effects with proper z-index */}
@@ -17,7 +17,7 @@ export default function Hero() {
 				<div className="absolute left-1/2 top-1/3 w-48 h-48 rounded-full bg-purple-500/20 blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
 			</div>
 
-			<div className="max-w-6xl mx-auto px-4 relative z-10 flex flex-col lg:flex-row items-center justify-between gap-12">
+			<div className="max-w-6xl mx-auto px-4 relative z-20 flex flex-col lg:flex-row items-center justify-between gap-12">
 				{/* Main text content (server-rendered) */}
 				<div id="hero-content" className="lg:w-7/12 text-center lg:text-left">
 					<div className="inline-block px-4 py-1.5 bg-blue-800/40 dark:bg-blue-950/60 backdrop-blur-lg rounded-full mb-4 border border-blue-400/20 shadow-lg shadow-blue-900/10">
@@ -36,20 +36,20 @@ export default function Hero() {
 						I build scalable web and mobile applications with modern tools, clean code, and a strong user-centered mindset.
 					</p>
 
-					<div className="flex flex-col sm:flex-row justify-center lg:justify-start space-y-3 sm:space-y-0 sm:space-x-4">
+					<div className="flex flex-col sm:flex-row justify-center lg:justify-start space-y-3 sm:space-y-0 sm:space-x-4 relative z-10">
 						{/* Anchor fallback is server-rendered so download works without JS */}
 						<a
 							id="resume-btn"
 							href="/Theophilus_Kolawole_Resume.pdf"
 							download
-							className="group bg-white text-blue-700 px-6 py-3 rounded-xl font-medium flex items-center justify-center hover:bg-blue-50 transition-all duration-300 shadow-lg shadow-blue-900/20 hover:shadow-xl hover:shadow-blue-900/30 hover:scale-105">
+							className="group bg-white text-blue-700 px-6 py-3 rounded-xl font-medium flex items-center justify-center hover:bg-blue-50 transition-all duration-300 shadow-lg shadow-blue-900/20 hover:shadow-xl hover:shadow-blue-900/30 hover:scale-105 cursor-pointer">
 							<span className="mr-2">⬇</span>
 							Download Résumé
 						</a>
 
 						<a
 							href="#contact"
-							className="group bg-blue-800/40 hover:bg-blue-700/60 border-2 border-white/30 text-white px-6 py-3 rounded-xl font-medium flex items-center justify-center hover:text-white transition-all duration-300 shadow-lg shadow-blue-900/10 hover:shadow-xl hover:shadow-blue-900/20 hover:scale-105 backdrop-blur-md">
+							className="group bg-blue-800/40 hover:bg-blue-700/60 border-2 border-white/30 text-white px-6 py-3 rounded-xl font-medium flex items-center justify-center hover:text-white transition-all duration-300 shadow-lg shadow-blue-900/10 hover:shadow-xl hover:shadow-blue-900/20 hover:scale-105 backdrop-blur-md cursor-pointer">
 							Contact Me
 						</a>
 					</div>
@@ -73,8 +73,8 @@ export default function Hero() {
 			</div>
 
 			{/* Improved wave */}
-			<div className="absolute bottom-0 left-0 right-0 z-20">
-				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120">
+			<div className="absolute bottom-0 left-0 right-0 z-10 pointer-events-none" aria-hidden="true">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" className="w-full h-auto block pointer-events-none">
 					<path
 						fill="currentColor"
 						className="text-white dark:text-slate-900"
